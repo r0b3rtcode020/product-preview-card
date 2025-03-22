@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "build-css": "sass scss/styles.scss styles.css",
-    "watch-css": "sass scss/styles.scss styles.css --watch"
+    "build-css": "sass scss/styles.scss css/styles.css",
+    "watch-css": "sass scss/styles.scss css/styles.css --watch"
   },
   "devDependencies": {
     "sass": "^1.86.0"
