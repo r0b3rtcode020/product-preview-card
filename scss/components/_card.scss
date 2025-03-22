@@ -1,0 +1,110 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.container {
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: $color-cream;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    border-radius: $spacing-8;
+    overflow: hidden;
+    @media (width >= 768px) {
+      width: 600px;
+      flex-direction: row;
+    }
+
+    .card__image {
+      width: 100%;
+      height: 240px;
+      background-image: url("../../images/image-product-mobile.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      @media (width >= 768px) {
+        width: calc(100% / 2);
+        height: 456px;
+        background-image: url("../../images/image-product-desktop.jpg");
+      }
+    }
+
+    .card__content {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-24;
+      padding: $spacing-32;
+      @media (width >= 768px) {
+        width: calc(100% / 2);
+        gap: $spacing-32;
+      }
+
+      .card__info {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-24;
+
+        .card__tag {
+          @include text-preset-4;
+          color: $color-grey;
+          text-transform: uppercase;
+        }
+
+        .card__title {
+          @include text-preset-1;
+          color: $color-black;
+        }
+
+        .card__description {
+          @include text-preset-3;
+          color: $color-grey;
+        }
+      }
+
+      .card__prices {
+        display: flex;
+        align-items: center;
+        gap: $spacing-16;
+
+        .card__price-discount {
+          @include text-preset-1;
+          color: $color-green-500;
+        }
+
+        .card__price-original {
+          @include text-preset-5;
+          color: $color-grey;
+          text-decoration: line-through;
+        }
+      }
+
+      .card__button {
+        @include text-preset-2;
+        background-color: $color-green-500;
+        color: $color-white;
+        border-radius: $spacing-8;
+        padding: $spacing-16 $spacing-32;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: $spacing-8;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $color-green-700;
+        }
+
+        img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}

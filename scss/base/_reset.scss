@@ -1,0 +1,33 @@
+@use "./variables" as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ff-montserrat;
+  font-size: $fs-14;
+  font-weight: $fw-medium;
+  line-height: $lh-160;
+}
+
+img {
+  max-width: 100%; /* Escala las imágenes y videos al ancho del contenedor */
+  height: auto; /* Mantiene las proporciones */
+  display: block; /* Elimina espacios en blanco debajo de las imágenes */
+}
+
+a {
+  text-decoration: none; /* Elimina subrayados */
+  color: inherit; /* Hace que los enlaces adopten el color del texto */
+}
+
+button {
+  font: inherit; /* Adopta la fuente del contenedor */
+  border: none; /* Elimina bordes predeterminados */
+  background: none; /* Limpia estilos base */
+}

@@ -1,0 +1,37 @@
+@use "./variables" as *;
+
+@mixin text-preset-1 {
+  font-family: $ff-fraunces;
+  font-size: $fs-32;
+  font-weight: $fw-bold;
+  line-height: $lh-100;
+}
+
+@mixin text-preset-2 {
+  font-family: $ff-montserrat;
+  font-size: $fs-14;
+  font-weight: $fw-bold;
+  line-height: $lh-110;
+}
+
+@mixin text-preset-3 {
+  font-family: $ff-montserrat;
+  font-size: $fs-14;
+  font-weight: $fw-medium;
+  line-height: $lh-160;
+}
+
+@mixin text-preset-4 {
+  font-family: $ff-montserrat;
+  font-size: $fs-12;
+  font-weight: $fw-medium;
+  line-height: $lh-120;
+  letter-spacing: 5px;
+}
+
+@mixin text-preset-5 {
+  font-family: $ff-montserrat;
+  font-size: $fs-13;
+  font-weight: $fw-medium;
+  line-height: $lh-120;
+}
