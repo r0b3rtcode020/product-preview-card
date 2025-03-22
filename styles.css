@@ -148,6 +148,10 @@ button {
 .container .card .card__content .card__button:hover {
   background-color: #1a4032;
 }
+.container .card .card__content .card__button:focus {
+  outline: 2px solid #3d8168;
+  outline-offset: 0.25rem;
+}
 .container .card .card__content .card__button img {
   width: 18px;
   height: 18px;
